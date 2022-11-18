@@ -1,4 +1,5 @@
 import sys
+import random
 
 from PyQt5.QtGui import QPainter, QColor
 from PyQt5.QtWidgets import QWidget, QApplication, QPushButton
@@ -30,7 +31,8 @@ class Example(QWidget):
 
     def draw_circ(self, qp):
         qp.setBrush(QColor(255, 255, 0))
-        qp.drawEllipse(30, 30, 70, 70)
+        le = random.randint(20, 100)
+        qp.drawEllipse(30, 30, le, le)
 
 
 if __name__ == '__main__':
